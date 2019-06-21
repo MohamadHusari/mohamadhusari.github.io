@@ -44,10 +44,12 @@ class HomePage extends Component {
                             <NavLink className="nav-link" exact to="/" activeClassName="selected">Home</NavLink>
                         </div>
                         <div className="col-12 col-md-4">
-                            <a href="#">Clients</a>
+                            <a href="#">My work</a>
+                            {/*<NavLink className="nav-link" to="/mywork" activeClassName="selected">My Work</NavLink>*/}
                         </div>
                         <div className="col-12 col-md-4">
                             <a href="#">Contact</a>
+                            {/*<NavLink className="nav-link" to="/mywork" activeClassName="selected">My Work</NavLink>*/}
                         </div>
                     </div>
                     <div className="row no-gutters border-bottom pb-2 pt-3">
