@@ -148,3 +148,46 @@ body {
 @media (max-width: 767.98px) {
   .slideshow {
     width: 50%; } }
+<<<<<<< Updated upstream
+=======
+
+.sidenav {
+  height: 0;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  margin: 0 auto;
+  z-index: 1;
+  /* Stay on top */
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  overflow-y: hidden;
+  transition: all .5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0); }
+
+.showsidenav {
+  height: 55px;
+  width: 90%;
+  margin: 0 auto;
+  transform: scaleY(1); }
+
+@media (max-width: 767.98px) {
+  .showsidenav {
+    height: auto; } }
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: inline-block; }
+
+.sidenav a.selected {
+  color: #f1f1f1; }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+>>>>>>> Stashed changes
