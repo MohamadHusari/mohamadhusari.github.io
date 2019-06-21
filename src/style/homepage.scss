@@ -2,12 +2,11 @@ body {
   //background: #acb6e5;  /* fallback for old browsers */
   //background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
   //background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: #2193b0;  /* fallback for old browsers */
+  background: #2193b0; /* fallback for old browsers */
   background: -webkit-linear-gradient(90deg, #e8e8e8 50%, #e8e8e8 50%) left/50%,
-              -webkit-linear-gradient(35deg, #3931af, #00c6ff) left/50%;
-  background:
-          linear-gradient(90deg, #e8e8e8, #e8e8e8) left/50% 100% no-repeat,
-          linear-gradient(35deg, #3931af, #00c6ff) right fixed no-repeat;
+  -webkit-linear-gradient(35deg, #3931af, #00c6ff) left/50%;
+  background: linear-gradient(90deg, #e8e8e8, #e8e8e8) left/50% 100% no-repeat,
+  linear-gradient(35deg, #3931af, #00c6ff) right 100% no-repeat;
   //background-repeat: ;
   //background-attachment: ;
 
@@ -20,35 +19,35 @@ body {
 }
 
 .portfolio {
-  padding:4%;
-  text-align:center;
+  padding: 4%;
+  text-align: center;
 }
 
 .heading {
-  background:#fff;
-  padding:1%;
-  text-align:left;
-  box-shadow:0 0 4px 0 #545b62;
+  background: #fff;
+  padding: 1%;
+  text-align: left;
+  box-shadow: 0 0 4px 0 #545b62;
 }
 
 .heading img {
-  width:10%;
+  width: 10%;
 }
 
 .bio-info {
-  padding:2% 0 2% 0;
-  background:#fff;
-  box-shadow:0 0 4px 0 #b0b3b7;
+  //padding: 0 0 2% 0;
+  background: #fff;
+  box-shadow: 0 0 4px 0 #b0b3b7;
 }
 
 .bio-image {
-  text-align:center;
+  text-align: center;
 }
 
 .bio-image img {
-  width:250px;
-  height:250px;
-  border-radius:50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 #my-name {
@@ -66,41 +65,49 @@ body {
   //padding: 5%;
 }
 
-.social-list  a li svg {
+.social-list a li svg {
   width: 25px !important;
   height: 25px !important;
 }
 
-.social-list a:nth-child(1){
+.social-list a:nth-child(1) {
   svg {
     color: rgb(75, 110, 168) !important;
   }
+
   li:hover {
     svg {
       color: rgb(255, 255, 255) !important;
     }
+
     background-color: rgb(75, 110, 168) !important;
   }
 }
-.social-list a:nth-child(2){
+
+.social-list a:nth-child(2) {
   svg {
     color: #04669A !important;
   }
+
   li:hover {
     svg {
       color: rgb(255, 255, 255) !important;
     }
+
     background-color: #04669A !important;
   }
 }
-.social-list a:nth-child(3){
+
+.social-list a:nth-child(3) {
   svg {
     color: rgba(4, 2, 4, 0.77) !important;
   }
+
   li:hover {
     svg {
       color: rgb(255, 255, 255) !important;
     }
+
     background-color: rgba(4, 2, 4, 0.77) !important;
   }
 }
@@ -111,83 +118,135 @@ body {
 
 .proj-link {
   @media (max-width: 575.98px) {
-    word-wrap:break-word;
+    word-wrap: break-word;
 
   }
 }
 
 
-  /* Icon 3 */
-  .icon-bar {
-    width: 22px;
-    height: 2px;
-    background-color: #000000;
-    display: block;
-    transition: all 0.2s;
-    margin-top: 4px
-  }
+/* Icon 3 */
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+  transition: all 0.2s;
+  margin-top: 4px
+}
 
-  .navbar-toggler {
-    border: none;
-    background: transparent !important;
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
 
-  }
-  .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-  }
+}
 
-  .middle-bar {
-    opacity: 0;
-  }
+.top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
 
-  .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-  }
-  .menu {
-    cursor: pointer;
-  }
-  .collapsed .top-bar {
-    transform: rotate(0);
-  }
+.middle-bar {
+  opacity: 0;
+}
 
-  .collapsed .middle-bar {
-    opacity: 1;
-  }
+.bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
 
-  .collapsed .bottom-bar {
-    transform: rotate(0);
-  }
+.menu {
+  cursor: pointer;
+  //div:first-child {
+  //  background: #00c6ff;
+  //}
+}
 
-  .slide{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(27, 27, 27, 0.9) 100%);
-    position: absolute;
-    height: calc(100vh - 56px);
-    width:0;
-    right: 0;
-    top: 100%;
-    overflow: hidden;
-    transition:  0.5s;
+.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.collapsed .middle-bar {
+  opacity: 1;
+}
+
+.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.slide {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(27, 27, 27, 0.9) 100%);
+  position: absolute;
+  height: calc(100vh - 56px);
+  width: 0;
+  right: 0;
+  top: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.slideshow {
+  display: flex;
+  //width: 50%;
+  @media (max-width: 991.98px) {
+    width: 35%;
   }
-  .slideshow {
-    display: flex;
-    //width: 50%;
-    @media (max-width: 991.98px) {
-      width: 35%;
-    }
-    @media (max-width: 767.98px) {
-      width: 50%;
-    }
-    z-index: 100;
-    cursor: pointer;
-    overflow-y: auto;
-    overflow-x: hidden;
-    //padding-top: 60px;
-    //background: #262626db none repeat scroll 0 0;
-    color: rgba(251, 251, 251, 0.5);
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
+  @media (max-width: 767.98px) {
+    width: 50%;
   }
+  z-index: 100;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  //padding-top: 60px;
+  //background: #262626db none repeat scroll 0 0;
+  color: rgba(251, 251, 251, 0.5);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+.sidenav {
+  //border-radius: 0px 0px 12px 12px; /* or add rounded-bottom to classname*/
+  height: 0; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  margin: 0 auto;
+  //position: absolute; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
+  //line-height: 50px;
+  //padding-top: 60px; /* Place content 60px from the top */
+  //transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: all .5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+}
+.showsidenav {
+  height: 55px;
+  @media (max-width: 767.98px) {
+    height: auto;
+  }
+  width: 90%;
+  margin: 0 auto;
+  transform: scaleY(1);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: inline-block;
+  //transition: 0.3s;
+  &.selected {
+    color: #f1f1f1;
+  }
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
 
