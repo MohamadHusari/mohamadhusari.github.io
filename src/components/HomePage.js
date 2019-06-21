@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import logoimg from '../images/logo.png'
 import profilepic from '../images/profile-pic1.png'
 import '../style/homepage.css';
+import {NavLink} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faLink } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -20,25 +21,39 @@ class HomePage extends Component {
     };
     render() {
         return (
-            <div className="container portfolio">
-                <div className="row">
+            <div className="container portfolio position-relative">
+                <div className="row no-gutters">
                     <div className="col-md-12">
                         <div className="heading clearfix">
                             <img src={logoimg} alt="close"/>
-                        <span className="font-weight-bold">Profile page</span>
-                            <div className={`menu pt-1 float-right${this.state.show ? '' : ' collapsed'}`} onClick={this.slideShow} >
-                                <div className="d-inline-block">
+                        <span className="font-weight-bold">Home</span>
+                            <div className={`menu float-right${this.state.show ? '' : ' collapsed'}`} onClick={this.slideShow} >
+                                {/*<span className="d-inline-block font-weight-bolder">Menu</span>*/}
+                                <button className="btn d-inline-block">
                                     <span className="icon-bar top-bar"/>
                                     <span className="icon-bar middle-bar"/>
                                     <span className="icon-bar bottom-bar"/>
-                                </div>
-                                <span className="d-inline-block font-weight-bolder pl-2">Menu</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="bio-info ">
-                    <div className="row no-gutters border-bottom pb-2">
+                <div className="bio-info pb-2">
+                    <div id="main" className={`row no-gutters sidenav ${this.state.show ? 'showsidenav rounded-bottom' : ''}`}>
+                        <div className="col-12 col-md-3">
+                            <NavLink className="nav-link" exact to="/" activeClassName="selected">Home</NavLink>
+                        </div>
+                        <div className="col-12 col-md-3">
+                            <a href="1">About</a>
+                        </div>
+                        <div className="col-12 col-md-3">
+                            <a href="2">Clients</a>
+                        </div>
+                        <div className="col-12 col-md-3">
+                            <a href="3">Contact</a>
+                        </div>
+                    </div>
+                    <div className="row no-gutters border-bottom pb-2 pt-3">
                         <div className="col-12 col-lg-4">
                             <div className="row">
                                 <div className="col-md-12">
@@ -190,6 +205,48 @@ class HomePage extends Component {
                             </p>
                             <p>
                                 <span className="pl-2"><FontAwesomeIcon className="text-primary" icon={faLink}/> <b className="font-weight-bold">GitHub link: </b><a className="d-lg-inline-block proj-link" href="https://github.com/MohamadHusari/Wishes">https://github.com/MohamadHusari/Wishes</a></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="row no-gutters pb-1 py-md-2">
+                        <div className="col-12 col-lg-4 pl-2 text-left text-lg-center">
+                            <h6 className="titles font-weight-bold font-italic"><u>TECHNOLOGIES:</u></h6>
+                        </div>
+                    </div>
+                    <div className="row no-gutters">
+                        <div className="col-12 col-lg-10 offset-lg-2 pt-1 pt-lg-0 px-2 text-left">
+                            <p>
+                                <span className="d-inline-block mr-3"><FontAwesomeIcon icon={faCheck}/></span>
+                                <b className="font-weight-bold">Python, JavaScript (ES6+), React, HTML5, CSS3, Bootstrap.</b><br/>
+                                <span className="d-inline-block mr-3"><FontAwesomeIcon icon={faCheck}/></span>
+                                <b className="font-weight-bold">Angular, C/C++, Ionic, SVN, JAVA, Selenium.</b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="row no-gutters pb-1 py-md-2">
+                        <div className="col-12 col-lg-4 pl-2 text-left text-lg-center">
+                            <h6 className="titles font-weight-bold font-italic"><u>LANGUAGES:</u></h6>
+                        </div>
+                    </div>
+                    <div className="row no-gutters">
+                        <div className="col-12 col-lg-3 offset-1 offset-md-1 offset-lg-2 pt-1 pt-lg-0 px-2 text-left">
+                            <p>
+                                <span className="d-inline-block mr-3"><FontAwesomeIcon icon={faCheck}/></span>
+                                <b className="font-weight-bold">English</b> – Proficient
+                            </p>
+                        </div>
+                        <div className="col-12 col-lg-3 offset-1 offset-md-1 offset-lg-0 pt-1 pt-lg-0 px-2 text-left">
+                            <p>
+                                <span className="d-inline-block mr-3"><FontAwesomeIcon icon={faCheck}/></span>
+                                <b className="font-weight-bold">Hebrew</b> – Fluent
+                            </p>
+                        </div>
+                        <div className="col-12 col-lg-4 offset-1 offset-md-1 offset-lg-0 pt-1 pt-lg-0 px-2 text-left">
+                            <p>
+                                <span className="d-inline-block mr-3"><FontAwesomeIcon icon={faCheck}/></span>
+                                <b className="font-weight-bold">Arabic</b> – Mother tongue
                             </p>
                         </div>
                     </div>
