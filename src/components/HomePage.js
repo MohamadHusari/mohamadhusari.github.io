@@ -40,17 +40,14 @@ class HomePage extends Component {
                 </div>
                 <div className="bio-info pb-2">
                     <div id="main" className={`row no-gutters sidenav ${this.state.show ? 'showsidenav rounded-bottom' : ''}`}>
-                        <div className="col-12 col-md-3">
+                        <div className="col-12 col-md-4">
                             <NavLink className="nav-link" exact to="/" activeClassName="selected">Home</NavLink>
                         </div>
-                        <div className="col-12 col-md-3">
-                            <a href="1">About</a>
+                        <div className="col-12 col-md-4">
+                            <a href="#">Clients</a>
                         </div>
-                        <div className="col-12 col-md-3">
-                            <a href="2">Clients</a>
-                        </div>
-                        <div className="col-12 col-md-3">
-                            <a href="3">Contact</a>
+                        <div className="col-12 col-md-4">
+                            <a href="#">Contact</a>
                         </div>
                     </div>
                     <div className="row no-gutters border-bottom pb-2 pt-3">
