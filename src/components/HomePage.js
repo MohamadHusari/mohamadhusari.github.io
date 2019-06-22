@@ -1,12 +1,13 @@
-import React, {Component} from 'react'
-import logoimg from '../images/logo.png'
-import profilepic from '../images/profile-pic1.png'
+import React, {Component} from 'react';
+import logoimg from '../images/logo.png';
+import profilepic from '../images/profile-pic1.png';
 import '../style/homepage.css';
 import {NavLink, Redirect} from "react-router-dom";
 import {  Route, Switch} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faLink } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import ContactMe from './ContactMe';
 
 
 const profile = () => {
@@ -213,66 +214,83 @@ const profile = () => {
     );
 };
 
-const contactme = () => {
-    return (
-        <>
-            <div className="row no-gutters mt-4 mt-lg-3">
-                <div className="col-md-12">
-                    <div className="text-center text-center">
-                        <h1 className="display-4 font-weight-bold font-italic p-0 m-0" id="my-name">Drop Us a Message</h1>
-                    </div>
-                </div>
-            </div>
-            <form className="mt-5">
-                <div className="from-row d-flex">
-                    <div className="form-group col-md-6">
-                        <input type="text" id="name" className="form-control" placeholder="Your Name"/>
-                    </div>
-                    <div className="form-group col-md-6">
-                        <input type="email" id="email" className="form-control" placeholder="Your Email"/>
-                    </div>
-                </div>
-                <div className="from-row d-flex">
-                    <div className="form-group col-md-6">
-                        <input type="text" id="website" className="form-control" placeholder="Your Website"/>
-                    </div>
-                    <div className="form-group col-md-6">
-                        <input type="text" id="address" className="form-control" placeholder="Where are You From?"/>
-                    </div>
-                </div>
-                <div className="from-row d-flex">
-                    <div className="col-sm-12">
-                        <select defaultValue={'DEFAULT'} id="subject" className="form-group form-control">
-                            <option value="DEFAULT" disabled>Subject</option>
-                            <option>Website Design & Development</option>
-                            <option>Wordpress Development</option>
-                            <option>Search Engine Optimization</option>
-                            <option>Mobile Website</option>
-                            <option>I Want to General Talk</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div className="from-row d-flex">
-                    <div className="col-sm-12">
-                        <div className="textarea-message form-group">
-                            <textarea id="message" className="textarea-message form-control" placeholder="Your Message"
-                                      rows="5"/>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="text-center">
-                    <button type="submit"
-                            className="button button-style button-style-dark button-style-color-2">Submit
-                    </button>
-                </div>
-
-            </form>
-        </>
-    );
-};
+// const contactme = () => {
+//     return (
+//         <>
+//             <div className="row no-gutters mt-4 mt-lg-3">
+//                 <div className="col-md-12">
+//                     <div className="text-center text-center">
+//                         <h1 className="display-4 font-weight-bold font-italic p-0 m-0" id="my-name">Drop Us a Message</h1>
+//                     </div>
+//                 </div>
+//             </div>
+//             <form className="mt-5">
+//                 <div className="from-row d-flex">
+//                     <div className="form-group col-md-6">
+//                         <div className="input-group">
+//                             <div className="input-group-prepend">
+//                                 <div className="input-group-text">@</div>
+//                             </div>
+//                         <input type="text" id="name" className="form-control rounded-right"
+//                                defaultValue={this.state.name.value}
+//                                onBlur={this.onInputChange} placeholder="Your Name"/>
+//                         </div>
+//                         {this.state.name.errors.map((err, i) => (
+//                             <small key={i} className="text-danger">
+//                                 {err}
+//                             </small>
+//                         ))}
+//                     </div>
+//                     <div className="form-group col-md-6">
+//                         <div className="input-group">
+//                             <div className="input-group-prepend">
+//                                 <div className="input-group-text">@</div>
+//                             </div>
+//                             <input type="email" id="email" className="form-control rounded-right" placeholder="Your Email"/>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div className="from-row d-flex">
+//                     <div className="form-group col-md-6">
+//                         <input type="text" id="website" className="form-control" placeholder="Your Website"/>
+//                     </div>
+//                     <div className="form-group col-md-6">
+//                         <input type="text" id="address" className="form-control" placeholder="Where are You From?"/>
+//                     </div>
+//                 </div>
+//                 <div className="from-row d-flex">
+//                     <div className="col-sm-12">
+//                         <select defaultValue={'DEFAULT'} id="subject" className="form-group form-control">
+//                             <option value="DEFAULT" disabled>Subject</option>
+//                             <option>Website Design & Development</option>
+//                             <option>Wordpress Development</option>
+//                             <option>Search Engine Optimization</option>
+//                             <option>Mobile Website</option>
+//                             <option>I Want to General Talk</option>
+//                             <option>Other</option>
+//                         </select>
+//                     </div>
+//                 </div>
+//                 <div className="from-row d-flex">
+//                     <div className="col-sm-12">
+//                         <div className="textarea-message form-group">
+//                             <textarea id="message" className="textarea-message form-control" placeholder="Your Message"
+//                                       rows="5"/>
+//                         </div>
+//                     </div>
+//                 </div>
+//
+//
+//                 <div className="text-center">
+//                     <button type="submit"
+//                             className="button button-style button-style-dark button-style-color-2">Submit
+//                     </button>
+//                 </div>
+//
+//             </form>
+//         </>
+//     );
+// };
 
 
 class HomePage extends Component {
@@ -280,7 +298,7 @@ class HomePage extends Component {
         super();
         this.slideShow = this.slideShow.bind(this);
         this.state={
-            show:false
+            show:false,
         };
     }
     componentWillMount() {
@@ -292,6 +310,7 @@ class HomePage extends Component {
         const {show} = this.state;
         this.setState({show:!show});
     };
+
     titlechange = (title)=>{
         document.title = 'Mohamad Husari - ' + title;
     };
@@ -333,7 +352,7 @@ class HomePage extends Component {
                     </div>
                     <Switch>
                         <Route path={`${path}`} exact component={profile} />
-                        <Route path={`${path}/contact-me`} component={contactme} />
+                        <Route path={`${path}/contact-me`} component={ContactMe} />
                         {/*<Route path={`${path}/contact`} component={Contact} />*/}
                         <Redirect from="/" to="/home" />
                     </Switch>
