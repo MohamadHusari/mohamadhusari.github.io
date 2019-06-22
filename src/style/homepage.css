@@ -2,7 +2,7 @@ body {
   background: #2193b0;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(90deg, #e8e8e8 50%, #e8e8e8 50%) left/50%, -webkit-linear-gradient(35deg, #3931af, #00c6ff) left/50%;
-  background: linear-gradient(90deg, #e8e8e8, #e8e8e8) left/50% 100% no-repeat, linear-gradient(35deg, #3931af, #00c6ff) right 100% no-repeat;
+  background: linear-gradient(90deg, #e8e8e8, #e8e8e8) left/50% 100% no-repeat, linear-gradient(90deg, #3931af, #00c6ff) right 100% no-repeat;
   height: 100%;
   background-attachment: fixed;
   /*background:*/
@@ -57,27 +57,24 @@ body {
 
 .social-list a:nth-child(1) li:hover {
   background-color: #4b6ea8 !important; }
-
-.social-list a:nth-child(1) li:hover svg {
-  color: white !important; }
+  .social-list a:nth-child(1) li:hover svg {
+    color: white !important; }
 
 .social-list a:nth-child(2) svg {
   color: #04669A !important; }
 
 .social-list a:nth-child(2) li:hover {
   background-color: #04669A !important; }
-
-.social-list a:nth-child(2) li:hover svg {
-  color: white !important; }
+  .social-list a:nth-child(2) li:hover svg {
+    color: white !important; }
 
 .social-list a:nth-child(3) svg {
   color: rgba(4, 2, 4, 0.77) !important; }
 
 .social-list a:nth-child(3) li:hover {
   background-color: rgba(4, 2, 4, 0.77) !important; }
-
-.social-list a:nth-child(3) li:hover svg {
-  color: white !important; }
+  .social-list a:nth-child(3) li:hover svg {
+    color: white !important; }
 
 .titles {
   font-size: 1.1rem !important; }
@@ -141,14 +138,12 @@ body {
   color: rgba(251, 251, 251, 0.5);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   text-align: center; }
-
-@media (max-width: 991.98px) {
-  .slideshow {
-    width: 35%; } }
-
-@media (max-width: 767.98px) {
-  .slideshow {
-    width: 50%; } }
+  @media (max-width: 991.98px) {
+    .slideshow {
+      width: 35%; } }
+  @media (max-width: 767.98px) {
+    .slideshow {
+      width: 50%; } }
 
 .sidenav {
   height: 0;
@@ -172,10 +167,9 @@ body {
   width: 90%;
   margin: 0 auto;
   transform: scaleY(1); }
-
-@media (max-width: 767.98px) {
-  .showsidenav {
-    height: auto; } }
+  @media (max-width: 767.98px) {
+    .showsidenav {
+      height: auto; } }
 
 .sidenav a {
   padding: 8px 8px 8px 8px;
@@ -183,9 +177,8 @@ body {
   font-size: 25px;
   color: #818181;
   display: inline-block; }
-
-.sidenav a.selected {
-  color: #f1f1f1; }
+  .sidenav a.selected {
+    color: #f1f1f1; }
 
 .sidenav a:hover {
   color: #f1f1f1; }
@@ -260,3 +253,129 @@ body {
 .button-style-dark {
   border: 3px solid #000000;
   color: #000000; }
+
+.webbtn .btn-link {
+  background: transparent;
+  margin: 3px;
+  border: 1px solid #eaeaea;
+  border-radius: 0px; }
+
+.webbtn .btn-link:hover {
+  background: #eaeaea;
+  color: black; }
+
+.webcard {
+  display: flex;
+  padding: 0;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: center; }
+
+.webcard > .web {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex: 0 1 360px;
+  margin: 15px;
+  padding: 0; }
+
+.webcard > .web:hover {
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5); }
+
+.webcard > .web figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 100%; }
+
+.webpic {
+  background: #444;
+  position: relative; }
+
+.webbtn {
+  margin: 0;
+  padding: 0; }
+
+.webbtn:after {
+  clear: both; }
+
+.webcard > .web figure .webpic img {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: .50; }
+
+.webcard > .web:hover figure .webpic img {
+  opacity: 0.9; }
+
+.webcard > .web figure .webpic .webnum {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: .8em;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 3px 5px; }
+
+.webcard > .web figure .webpic .webnum.hot {
+  background: #000;
+  background: red;
+  background: -webkit-linear-gradient(0deg, red, orange);
+  background: linear-gradient(90deg, red, orange);
+  background-size: 200% 200%;
+  -webkit-animation: hot 10s ease infinite;
+  -moz-animation: hot 10s ease infinite;
+  -o-animation: hot 10s ease infinite;
+  animation: hot 10s ease infinite; }
+
+.webcard > .web figure .webbtn {
+  background: transparent;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  align-content: center; }
+
+.webcard > .web figure .webbtn a {
+  flex: 1; }
+
+.webcard > .web figure figcaption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  margin: 0 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white; }
+
+figcaption h3 a {
+  text-decoration: none;
+  color: white; }
+
+.tourprice {
+  opacity: 0;
+  display: none;
+  font-size: .8em; }
+
+.currency {
+  font-weight: 300; }
+
+.price {
+  font-size: 2em;
+  font-weight: 300; }

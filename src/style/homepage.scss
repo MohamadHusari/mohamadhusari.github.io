@@ -6,7 +6,7 @@ body {
   background: -webkit-linear-gradient(90deg, #e8e8e8 50%, #e8e8e8 50%) left/50%,
   -webkit-linear-gradient(35deg, #3931af, #00c6ff) left/50%;
   background: linear-gradient(90deg, #e8e8e8, #e8e8e8) left/50% 100% no-repeat,
-  linear-gradient(35deg, #3931af, #00c6ff) right 100% no-repeat;
+  linear-gradient(90deg, #3931af, #00c6ff) right 100% no-repeat;
   height: 100%;
   background-attachment: fixed;
   //background-repeat: ;
@@ -326,5 +326,158 @@ body {
   border: 3px solid #000000;
   color: #000000;
 }
+
+
+
+.webbtn a {
+    //color: #363636 !important;
+}
+.webbtn .btn-link {
+  background: transparent;
+  margin: 3px;
+  border: 1px solid #eaeaea;
+  border-radius: 0px;
+}
+.webbtn .btn-link:hover {
+    background: #eaeaea;
+    color: black;
+}
+.webcard {
+  display: flex;
+  padding: 0;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: center;
+}
+.webcard > .web {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  flex: 0 1 360px;
+  margin: 15px;
+  padding: 0;
+}
+.webcard > .web:hover {
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  //cursor: pointer;
+  
+}
+.webcard > .web figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.webpic {
+  background: #444;
+  position: relative;
+}
+.webbtn {
+  margin: 0;
+  padding: 0;
+}
+.webbtn:after {
+  clear: both;
+}
+.webcard > .web figure .webpic img {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: .50;
+}
+.webcard > .web:hover figure .webpic img {
+  opacity: 0.9;
+}
+//.webcard > .web figure .webpic .tourcat {
+//  color: #fff;
+//  font-size: .8em;
+//  padding: 3px 5px;
+//  position: absolute;
+//  right: 15px;
+//  text-transform: uppercase;
+//  bottom: 15px;
+//}
+.webcard>.web figure .webpic .webnum {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: .8em;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 3px 5px;
+}
+.webcard > .web figure .webpic .webnum.hot {
+  background: #000;
+  background: red;
+  background: -webkit-linear-gradient(0deg,red,orange);
+  background: linear-gradient(90deg,red,orange);
+  background-size: 200% 200%;
+  -webkit-animation: hot 10s ease infinite;
+  -moz-animation: hot 10s ease infinite;
+  -o-animation: hot 10s ease infinite;
+  animation: hot 10s ease infinite;
+}
+.webcard > .web figure .webbtn {
+  background: transparent;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.webcard > .web figure .webbtn a {
+  flex: 1;
+}
+.webcard > .web figure figcaption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+  margin: 0 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+}
+figcaption h3 a {
+  text-decoration: none;
+  color: white;
+  //color: #9fcdff;
+}
+//.description {
+//  opacity: 0;
+//  display: none;
+//}
+.tourprice {
+  opacity: 0;
+  display: none;
+  font-size: .8em;
+}
+.currency {
+  font-weight: 300;
+}
+.price {
+  font-size: 2em;
+  font-weight: 300;
+}
+//.web:hover figure figcaption .description,
+//.web:hover figure figcaption .tourprice {
+//  display: block;
+//  opacity: 1;
+//}
 
 

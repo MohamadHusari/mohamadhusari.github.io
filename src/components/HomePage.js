@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import logoimg from '../images/logo.png';
 import profilepic from '../images/profile-pic1.png';
+import personalsite from '../images/pesonalsite.png';
+import wixwishes from '../images/wixwishes.png';
 import '../style/homepage.css';
 import {NavLink, Redirect} from "react-router-dom";
 import {  Route, Switch} from "react-router-dom";
@@ -214,6 +216,80 @@ const profile = () => {
     );
 };
 
+const myworks = () => {
+    return (
+        <>
+            <div className="row no-gutters mt-4 mt-lg-3">
+                <div className="col-md-12">
+                    <div className="text-center text-center">
+                        <h1 className="display-4 font-weight-bold font-italic p-0 m-0" id="my-name">My Work</h1>
+                    </div>
+                </div>
+            </div>
+            <div className="row no-gutters mt-3 mt-lg-5">
+                <div className="webcard col-12 col-md-6">
+                    <div className="web">
+                        <figure>
+                            <div className="webpic">
+                                <img src={personalsite} alt="My personal site"/>
+                                    {/*<span className="tourcat">Domestic</span>*/}
+                                    <span className="webnum hot">1</span>
+                            </div>
+                            <figcaption>
+                                <h3 className="entry-title">
+                                    <a href="https://mohamadhusari.github.io">Personal Site</a></h3>
+                                {/*<span className="description">Domestic Tour Package 2 Days 1 Night</span>*/}
+                                {/*<span className="tourprice">*/}
+                                {/*    <span className="currency">Rp. </span><span className="price">1.500.000</span>*/}
+                                {/*    <span> / pax</span>*/}
+                                {/*</span>*/}
+                            </figcaption>
+                            <div className="webbtn">
+                                {/*<a href="//wa.me/6282127602518" className="btn-link btn-sm text-decoration-none">*/}
+                                {/*    <span>WhatsApp</span>*/}
+                                {/*</a>*/}
+                                <NavLink className="btn-link btn-sm" to={`/home/contact-me`} activeClassName="selected">Call us</NavLink>
+                                <a href="https://mohamadhusari.github.io" className="btn-link btn-sm">
+                                    <span>Show site</span>
+                                </a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div className="webcard col-12 col-md-6">
+                    <div className="web">
+                        <figure>
+                            <div className="webpic">
+                                <img src={wixwishes} alt="WixWishes site"/>
+                                {/*<span className="tourcat">Domestic</span>*/}
+                                <span className="webnum hot">2</span>
+                            </div>
+                            <figcaption>
+                                <h3 className="entry-title">
+                                    <a href="https://github.com/MohamadHusari/Wishes">WixWishes</a></h3>
+                                {/*<span className="description">Domestic Tour Package 2 Days 1 Night</span>*/}
+                                {/*<span className="tourprice">*/}
+                                {/*    <span className="currency">Rp. </span><span className="price">1.500.000</span>*/}
+                                {/*    <span> / pax</span>*/}
+                                {/*</span>*/}
+                            </figcaption>
+                            <div className="webbtn">
+                                {/*<a href="//wa.me/6282127602518" className="btn-link btn-sm text-decoration-none">*/}
+                                {/*    <span>WhatsApp</span>*/}
+                                {/*</a>*/}
+                                <NavLink className="btn-link btn-sm" to={`/home/contact-me`} activeClassName="selected">Call us</NavLink>
+                                <a href="https://github.com/MohamadHusari/Wishes" className="btn-link btn-sm">
+                                    <span>Show site</span>
+                                </a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
 // const contactme = () => {
 //     return (
 //         <>
@@ -342,8 +418,8 @@ class HomePage extends Component {
                             <NavLink className="nav-link" exact to="/home" activeClassName="selected">Home</NavLink>
                         </div>
                         <div className="col-12 col-md-4">
-                            <a href="1">My work</a>
-                            {/*<NavLink className="nav-link" to="/mywork" activeClassName="selected">My Work</NavLink>*/}
+                            {/*<a href="1">My work</a>*/}
+                            <NavLink className="nav-link" to={`${path}/mywork`} activeClassName="selected">My Work</NavLink>
                         </div>
                         <div className="col-12 col-md-4">
                             {/*<a href="#">Contact</a>*/}
@@ -353,7 +429,7 @@ class HomePage extends Component {
                     <Switch>
                         <Route path={`${path}`} exact component={profile} />
                         <Route path={`${path}/contact-me`} component={ContactMe} />
-                        {/*<Route path={`${path}/contact`} component={Contact} />*/}
+                        <Route path={`${path}/mywork`} component={myworks} />
                         <Redirect from="/" to="/home" />
                     </Switch>
                 </div>
