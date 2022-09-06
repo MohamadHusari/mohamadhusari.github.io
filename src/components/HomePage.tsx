@@ -1,7 +1,7 @@
 import 'styles/homepage.scss';
 import closeImage from 'images/close.png';
 import React, { useCallback, useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation, Link } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
 const HomePage = () => {
   const location = useLocation();
