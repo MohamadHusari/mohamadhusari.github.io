@@ -151,7 +151,8 @@ const Profile = () => {
             <p>
               <b className="font-black">•</b> At Datorama,
               <b className="font-bold"> partners</b> build apps that come
-              through me for<b className="font-bold"> checking</b>,
+              through me for
+              <b className="font-bold"> checking</b>,
               <b className="font-bold"> submitting</b>, and
               <b className="font-bold"> feedback</b>.
             </p>
@@ -160,7 +161,8 @@ const Profile = () => {
               <b className="font-bold"> Cypress</b> to write
               <b className="font-bold"> E2E tests </b>
               and integrated them into<b className="font-bold"> CI/CD</b>{' '}
-              pipeline using<b className="font-bold"> CircleCI</b>.
+              pipeline using
+              <b className="font-bold"> CircleCI</b>.
             </p>
           </div>
         </div>
@@ -188,7 +190,8 @@ const Profile = () => {
             </p>
             <p>
               <b className="font-black">•</b> Developing Automation E2E API
-              testing using<b className="font-bold"> python</b> under
+              testing using
+              <b className="font-bold"> python</b> under
               <b className="font-bold"> Linux</b>.
             </p>
           </div>

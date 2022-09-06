@@ -26,10 +26,7 @@ const SiteCard = ({ index, image, imageAlt, title, siteLink }: Props) => {
             </div>
             <figcaption className="flex flex-col flex-nowrap text-white absolute left-0 top-0 bottom-0 right-0 p-[15px] mb-[30px]">
               <h3 className="text-3xl">
-                <a
-                  href="https://mohamadhusari.github.io"
-                  className="text-white decoration-0"
-                >
+                <a href={siteLink} className="text-white decoration-0">
                   {title}
                 </a>
               </h3>
