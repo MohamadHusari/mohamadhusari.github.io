@@ -1,7 +1,7 @@
 import 'styles/homepage.scss';
 import closeImage from 'images/close.png';
 import React, { useCallback, useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, Link } from 'react-router-dom';
 
 const HomePage = () => {
   const location = useLocation();
@@ -80,18 +80,14 @@ const HomePage = () => {
               </NavLink>
             </div>
             <div className="flex-1 px-3">
-              <NavLink
-                className={({ isActive }) =>
-                  `transition ease-in-out delay-150 hover:scale-110${
-                    isActive
-                      ? ' selected cursor-default transition-none hover:scale-100'
-                      : ''
-                  }`
-                }
-                to="contact"
+              <a
+                target="_blank"
+                href="mailto:7osary@gmail.com"
+                className="transition ease-in-out delay-150 hover:scale-110"
+                rel="noreferrer"
               >
                 Contact me
-              </NavLink>
+              </a>
             </div>
           </div>
           <Outlet />

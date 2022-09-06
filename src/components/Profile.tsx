@@ -389,13 +389,13 @@ const Profile = () => {
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-0">
           <div className="col-span-1"></div>
           <div className="col-span-5 flex flex-col md:flex-row justify-self-center md:justify-self-auto md:justify-between text-left">
-            <p className="flex-1">
-              <span className="d-inline-block mr-3">
+            <p className="flex-1 mb-4 md:mb-0">
+              <span className="mr-3">
                 <FontAwesomeIcon icon={faCheck} />
               </span>
               <b className="font-weight-bold">English</b> – Proficient
             </p>
-            <p className="flex-1">
+            <p className="flex-1 mb-4 md:mb-0">
               <span className="d-inline-block mr-3">
                 <FontAwesomeIcon icon={faCheck} />
               </span>
