@@ -1,0 +1,103 @@
+body {
+  background: #b5dcd9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(90deg, #eca6a6 50%, #e89d9f 50%) left/50%,
+    -webkit-linear-gradient(35deg, #b1dad6, #b5dcd9) left/50%;
+  background: linear-gradient(90deg, #eca6a6, #e89d9f) left/50% 100% no-repeat,
+    linear-gradient(90deg, #b1dad6, #b5dcd9) right 100% no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+.profile {
+  //padding: 4%;
+  text-align: center;
+
+  .heading {
+    background: #fff;
+    padding: 1%;
+    text-align: left;
+    box-shadow: 0 0 4px 0 #545b62;
+
+    button {
+      .icon-bar {
+        width: 22px;
+        height: 2px;
+        background-color: #000000;
+        display: block;
+        transition: all 0.2s;
+        margin-top: 4px;
+      }
+
+      .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+
+      .middle-bar {
+        opacity: 0;
+      }
+
+      .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+
+      &.collapsed {
+        .top-bar {
+          transform: rotate(0);
+        }
+
+        .middle-bar {
+          opacity: 1;
+        }
+
+        .bottom-bar {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  .bio-info {
+    background: #fff;
+    box-shadow: 0 0 4px 0 #b0b3b7;
+
+    .bottom-menu {
+      border-radius: 0 0 12px 12px;
+      height: 0;
+      width: 0;
+      margin: 0 auto;
+      z-index: 1;
+      background-color: #111;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      transition: all 0.5s ease-in-out;
+      transform-origin: left top;
+      transform: scaleY(0);
+
+      &.show-bottom-menu {
+        height: 55px;
+        @media (max-width: 767px) { height: 180px; }
+        width: 90%;
+        margin: 0 auto;
+        transform: scaleY(1);
+      }
+
+      & a {
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: inline-block;
+        //transition: 0.3s;
+        &.selected {
+          color: #f1f1f1;
+        }
+
+        &:hover {
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
