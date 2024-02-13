@@ -128,7 +128,7 @@ const Profile = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="self-center mb-3 lg:mb-0">
             <h5 className="text-l lg:text-xl font-light italic">
-              8/2018 – Present
+              1/2020 – Present
             </h5>
           </div>
           <div className="col-span-2 grid gap-0 text-left">
